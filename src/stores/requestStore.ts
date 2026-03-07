@@ -6,7 +6,7 @@
  * ★ Insight ─────────────────────────────────────
  * - This replaces the observable pattern from the original vanilla JS
  * - Zustand provides similar simplicity with better TypeScript support
- * - The store is used by both DevTools panel and standalone window
+ * - The store is used by the DevTools panel
  * ─────────────────────────────────────────────────
  */
 

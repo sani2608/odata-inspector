@@ -9,7 +9,7 @@
  * - Left panel is resizable via drag handle
  * - Footer shows version, tab ID, and capture status
  * - Network capture is initialized automatically via useNetworkCapture hook
- * - Layout adapts to both DevTools and standalone window contexts
+ * - Layout runs in the DevTools panel context
  * ─────────────────────────────────────────────────
  */
 
@@ -26,7 +26,7 @@ import ResizablePane from './ResizablePane';
 
 export function PanelLayout() {
     // Initialize network capture and get context info
-    const { isDevTools, isStandalone, isInitialized, error } = useNetworkCapture();
+    const { isDevTools, isInitialized, error } = useNetworkCapture();
     const { theme } = useUIStore();
 
     // Apply theme on mount and when theme changes
@@ -47,14 +47,12 @@ export function PanelLayout() {
         ? `Error: ${error}`
         : isInitialized
           ? 'Capturing'
-          : isDevTools
-            ? 'Initializing...'
-            : 'Standalone';
+          : 'Initializing...';
 
     return (
         <div className="flex flex-col h-screen bg-background text-foreground">
             {/* Header */}
-            <Header isDevTools={isDevTools} isStandalone={isStandalone} />
+            <Header isDevTools={isDevTools} />
 
             {/* Main Content Area */}
             <main className="flex-1 flex overflow-hidden">

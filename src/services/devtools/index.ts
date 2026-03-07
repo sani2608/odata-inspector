@@ -13,6 +13,5 @@ export {
     cleanupNetworkCapture,
     detectODataRequestType,
     getCapturedMetadata,
-    initNetworkCapture,
-    initStandaloneCapture
+    initNetworkCapture
 } from './networkCapture';

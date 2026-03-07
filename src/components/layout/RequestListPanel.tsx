@@ -87,9 +87,6 @@ const RequestItem = memo(function RequestItem({
     const isError = request._error;
     const isBatch = request.batch;
     const isMetadata = request.isMetadata;
-    // In standalone mode, batch requests are shown as single POST requests
-    const isStandaloneBatch = request._isBatchRequest && !isBatch;
-
     return (
         <button
             type="button"
@@ -127,13 +124,6 @@ const RequestItem = memo(function RequestItem({
                     </Badge>
                 )}
 
-                {/* Standalone batch indicator - unparsed batch POST */}
-                {isStandaloneBatch && (
-                    <Badge variant="outline" className="text-[9px] px-1 py-0 gap-0.5 border-amber-500/50 text-amber-400" title="Batch request - use DevTools for individual operations">
-                        <Layers className="h-2.5 w-2.5" aria-hidden="true" />
-                        BATCH
-                    </Badge>
-                )}
 
                 {/* Metadata indicator */}
                 {isMetadata && (

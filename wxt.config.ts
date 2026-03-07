@@ -11,7 +11,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
  * - WXT auto-generates manifest.json from this config + entrypoints
  * - DevTools panel requires: devtools_page in manifest
  * - Network request capture requires: webRequest, webRequestBlocking permissions
- * - The extension runs in two contexts: DevTools panel and standalone window
+ * - The extension runs as a DevTools panel (F12 > OData Inspector)
  * ─────────────────────────────────────────────────
  *
  * @see https://wxt.dev/api/config.html
@@ -25,25 +25,13 @@ export default defineConfig({
         version: '2.0.0',
 
         // Required permissions for network interception
-        // 'debugger' permission allows standalone window to capture full request/response data
-        permissions: ['webRequest', 'storage', 'tabs', 'scripting', 'debugger'],
+        permissions: ['webRequest', 'storage', 'tabs', 'scripting'],
 
         // Host permissions for intercepting requests
         host_permissions: ['<all_urls>'],
 
         // DevTools page - creates the panel
         devtools_page: 'devtools.html',
-
-        // Action (toolbar icon) configuration
-        action: {
-            default_title: 'OData Inspector',
-            default_icon: {
-                16: 'icon/16.png',
-                32: 'icon/32.png',
-                48: 'icon/48.png',
-                128: 'icon/128.png',
-            },
-        },
 
         // Extension icons
         icons: {

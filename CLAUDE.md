@@ -43,13 +43,10 @@ npm run test:coverage    # With coverage report
   - Intercepts network requests via `chrome.webRequest` API
   - Detects OData patterns (`$batch`, `$metadata`, `/sap/opu/odata/`)
   - Maintains port connections with DevTools panels per tab
-  - Opens standalone window when toolbar icon clicked
 
 - **`entrypoints/devtools/main.ts`** - Creates "OData Inspector" panel in Chrome DevTools via `chrome.devtools.panels.create()`
 
-- **`entrypoints/panel/`** - React app that runs in both:
-  1. DevTools panel (F12 → OData Inspector tab)
-  2. Standalone popup window (toolbar icon click)
+- **`entrypoints/panel/`** - React app for the DevTools panel (F12 → OData Inspector tab)
 
 ### Communication Flow
 

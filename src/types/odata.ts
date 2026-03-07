@@ -167,7 +167,6 @@ export interface ODataRequest {
         functionImports: number;
         associations: number;
     };
-    /** Whether this is an unparsed batch request (standalone mode) */
     _isBatchRequest?: boolean;
 }
 
