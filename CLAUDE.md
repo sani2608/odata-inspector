@@ -88,3 +88,7 @@ Pattern: Each store exports custom hooks like `useSelectedRequest()`, `useFilter
 - `.output/chrome-mv3/` - Chrome production build
 - `.output/chrome-mv3-dev/` - Chrome development build
 - `.wxt/` - WXT generated types (gitignored)
+
+## Git Preferences
+
+- Do not add `Co-Authored-By` lines to commit messages

@@ -25,7 +25,7 @@ export default defineConfig({
         version: '2.0.0',
 
         // Required permissions for network interception
-        permissions: ['webRequest', 'storage', 'tabs', 'scripting'],
+        permissions: ['webRequest', 'tabs'],
 
         // Host permissions for intercepting requests
         host_permissions: ['<all_urls>'],
