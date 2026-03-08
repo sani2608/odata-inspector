@@ -147,6 +147,10 @@ Run `npm run lint:fix` to auto-fix issues.
 - Chrome (Manifest V3)
 - Firefox support available via `npm run dev:firefox`
 
+## Privacy Policy
+
+OData Inspector does not collect, store, or transmit any user data. All request data is processed locally in your browser and discarded when DevTools is closed. See the full [Privacy Policy](PRIVACY_POLICY.md).
+
 ## License
 
 MIT
